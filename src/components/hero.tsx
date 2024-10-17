@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Slider from 'react-slick';
+import Image from 'next/image';
 import 'slick-carousel/slick/slick.css'; 
 import 'slick-carousel/slick/slick-theme.css'; 
 
@@ -25,14 +26,36 @@ function Hero() {
 
     <div className='mx-auto w-full'>
     <Slider {...settings}>
-      <div className='' >
-        <img src="/p1.png" alt="Slide 1"  />
+      <div >
+      <Image
+      src="/p1.png"
+      alt='Slide 1'
+      layout='responsive'
+      width={1600}
+      height={900}
+      className='w-full'
+      />
+      
       </div>
       <div>
-        <img src="/p2.png" alt="Slide 2" />
+      <Image
+      src="/p2.png"
+      alt='Slide 1'
+      layout='responsive'
+      width={1600}
+      height={900}
+      className='w-full'
+      />
       </div>
       <div>
-        <img src="/p3.png" alt="Slide 3" />
+      <Image
+      src="/p3.png"
+      alt='Slide 1'
+      layout='responsive'
+      width={1600}
+      height={900}
+      className='w-full'
+      />
       </div>
     </Slider>
   </div>

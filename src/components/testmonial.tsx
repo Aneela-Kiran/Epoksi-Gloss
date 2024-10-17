@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import TestimonialData from '@/Data/textmonialData'
 import { FaUser } from "react-icons/fa";
 import GenerateRating from '@/components/rating';
-import { RiDoubleQuotesL , RiDoubleQuotesR } from "react-icons/ri";
+import { RiDoubleQuotesL  } from "react-icons/ri";
 
 const Testmonial = () => {
   const settings = {
@@ -59,7 +59,7 @@ const Testmonial = () => {
 
                         <RiDoubleQuotesL className='inline-block mr-2 text-green text-xl' />
                           {item.description}
-                          <RiDoubleQuotesR className='inline-block ml-2 text-green text-xl'/>
+                        {/* <RiDoubleQuotesR className='inline-block ml-2 text-green text-xl'/> */}
 
                     </div>
                     <div className='mx-auto'>
