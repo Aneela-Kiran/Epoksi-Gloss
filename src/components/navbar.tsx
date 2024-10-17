@@ -20,9 +20,10 @@ function Navbar(){
     </div>
 
     <div className="w-full sm:w-[300px] md:w-[70%] relative border rounded-lg ">
-    <input className="border-gray-200 rounded-lg w-full bg-transparent m-3   outline-none" type="text" placeholder="Search Product "  
-     />
-    <CiSearch className="absolute top-0 right-0 mr-3 mt-4 cursor-pointer"/>
+
+            <input className="border-gray-200 rounded-lg w-full bg-transparent m-3   outline-none" type="text" placeholder="Search Product "  
+            />
+            <CiSearch className="absolute top-0 right-0 mr-3 mt-4 cursor-pointer"/>
     </div>
 
 

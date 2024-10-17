@@ -14,8 +14,7 @@ const Footer = () => {
         alt="Company Logo"
         width={150}       
         height={50}   
-        />
-        
+        /> 
       </div>
       {/* quick links  */}
       <div className='flex flex-col justify-center items-center  py-2 sm:items-start'>
