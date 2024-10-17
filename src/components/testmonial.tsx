@@ -36,39 +36,6 @@ const Testmonial = () => {
     ],
   };
 
-  // const settings = {
-  //   dots: true,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 3,
-  //   autoplay:true,
-  //   autoplaySpeed:5000,
-  //   arrow:false,
-  //   responsive:[
-
-  //     {
-  //       breakpoint:768,
-  //       settings:{
-  //         slideToShow:2,
-  //         slideToScroll:2
-  //       },
-
-  //     },
-
-  //     {
-  //       breakpoint:675,
-  //       settings:{
-  //         slideToShow:1,
-  //         slideToScroll:1
-  //       },
-  //     },
-    
-  //   ]
-  // };
-  
-
-
   return (
     <div className='mx-auto my-12 py-10 overflow-hidden'>
             <h1 className='text-center  font-bold  text-2xl   sm:text-3xl  lg:text-5xl  xl:text-6xl text-green uppercase  underline underline-offset-8 ring-offset-emerald-950' >Testimonials</h1>
