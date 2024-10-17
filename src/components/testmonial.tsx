@@ -6,28 +6,28 @@ import 'slick-carousel/slick/slick-theme.css';
 import TestimonialData from '@/Data/textmonialData'
 import { FaUser } from "react-icons/fa";
 import GenerateRating from '@/components/rating';
-import { RiDoubleQuotesL ,RiDoubleQuotesR } from "react-icons/ri";
+import { RiDoubleQuotesL , RiDoubleQuotesR } from "react-icons/ri";
 
 const Testmonial = () => {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1, // Start with 1 slide for small screens
+    slidesToShow: 1, 
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
     arrows: false,
     responsive: [
       {
-        breakpoint: 768, // For medium screens
+        breakpoint: 768, 
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
         },
       },
       {
-        breakpoint: 1024, // For large screens
+        breakpoint: 1024, 
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
