@@ -1,6 +1,5 @@
 
 import { FaUser } from "react-icons/fa";
-import { RiDoubleQuotesR } from "react-icons/ri";
 const TestimonialData = 
 [
   {
@@ -41,7 +40,7 @@ const TestimonialData =
     "picture": "sophia-profile.jpg",
     "description": "Stunning resin jewelry The beautiful necklace I ordered is unique and goes perfectly with many outfits. I've already received so many compliments",
     "rating": 5,
-    "date": "15 Jan 2024"
+    "date": "15 Jan 2025"
   },
   {
     "id": "6",
