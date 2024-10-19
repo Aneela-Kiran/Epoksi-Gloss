@@ -22,7 +22,6 @@ const Footer = () => {
         <ul className='mt-4 cursor-pointer space-y-3'>
         <Link href={'/'}><li>Home</li></Link>
          <Link href={'/shop'}><li>shop</li></Link> 
-          <Link href={'/gallery'}> <li>Gallray</li></Link>
          <Link href={'/customOrder'}> <li>Custom order</li></Link> 
          <Link href={'/contact'}> <li>Contact Us</li></Link> 
         </ul>

@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import { PagesLinks } from "@/components/pages";
 import Footer from "@/components/footer";
+import MobNavBar from "@/components/MobNavBar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -33,8 +34,10 @@ export default function RootLayout({
       >
         <Navbar/>
         <PagesLinks/>
+       
         {children}
         <Footer/>
+        <MobNavBar/>
       </body>
     </html>
   );

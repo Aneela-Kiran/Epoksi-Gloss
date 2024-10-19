@@ -20,13 +20,13 @@ const highRatedProducts = productData.filter(product => product.rating === 4 || 
 
 
   return ( 
-  <div className='mx-auto mt-12  py-10'>
-      <h1 className='text-center font-bold text-5xl text-green'>Products Categories</h1>
+  <div className='mx-auto lg:mt-12 mt-6 py-10'>
+      <h1 className='text-center font-bold md:text-5xl text-xl  text-green'>Products Categories</h1>
       
-      <div className=' py-3  grid grid-cols-1 place-items-center  sm:grid-cols-2 sm:place-items-start lg:grid-cols-3 xl:grid-cols-4 gap-10 '>
+      <div className=' lg:py-3 py-2  grid grid-cols-2 place-items-center  sm:place-items-start lg:grid-cols-3 xl:grid-cols-4 lg:gap-10 gap-5  '>
         {
           highRatedProducts.map((product:productType)=>(
-            <div key={product.id} className='px-4 mt-5   border-gray-200 rounded-xl max-w-[400px] '>
+            <div key={product.id} className='lg:px-4 px-2 mt-5   border-gray-200 rounded-xl max-w-[400px] item flex flex-col justify-center items-center'>
                  <div>
                     <Image
                       className='w-full h-auto rounded-sm'
@@ -38,12 +38,13 @@ const highRatedProducts = productData.filter(product => product.rating === 4 || 
                   </div>
                   <div className='space-y-2 py-2 '>
                       <h1 className='text-green font-semibold uppercase'>{product.name} </h1>
-                      <p className='text-gray-600 max-w-[150px]'>{product.description } </p>                    
+                      <p className='text-gray-600 max-w-[150px]'>{product.description } </p>   
+                      <div className='p-1'>
+                            {GenerateRating(product.rating)}
+                      </div>                 
                   </div>
 
-                  <div className='py-1'>
-                    {GenerateRating(product.rating)}
-                  </div>
+                  
 
                   <div className='font-bold flex gap-2'>
                      PKR {product.price}
@@ -53,6 +54,10 @@ const highRatedProducts = productData.filter(product => product.rating === 4 || 
                   
                       </del>
                   </div>
+
+                  <div>
+                    <button className='p-1 lg:p-2 m-2  rounded border border-green'>Add to Cart</button>
+                  </div>
                  
             </div>
           ))
@@ -60,7 +65,7 @@ const highRatedProducts = productData.filter(product => product.rating === 4 || 
       </div>
       <div className='flex justify-center items-center'>
         <Link href={"/shop"}>
-      <button className= 'bg-green text-white font-sans py-2 px-10 mt-12 hover:bg-green-200 cursor-pointer '>Explor All</button>
+      <button className= 'bg-green text-white font-sans py-2 px-10 mt-12 hover:bg-green-200 cursor-pointer hover:bg-slate-100 hover:border-green  border-2 hover:text-black transition duration-500'>Explor All</button>
       </Link>
       </div>
 
