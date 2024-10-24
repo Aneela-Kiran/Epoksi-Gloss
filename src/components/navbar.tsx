@@ -13,14 +13,13 @@ import { FaFacebook ,FaLinkedin , FaInstagram , FaTwitter} from "react-icons/fa"
 import Cart from "@/components/cart";
 
 function Navbar(){
-    const[isMenuOpen , setMenue]=useState(false)
+  const [isMenuOpen, setMenu] = useState<boolean>(false);
+  const [isCartOpen, setCartOpen] = useState<boolean>(false); // State for cart toggle
 
-    const menuOpen=()=>{
-        setMenue(true);
-    }
-    const closeMenu=()=>{
-        setMenue(false)
-    }
+  const menuOpen = () => setMenu(true);
+  const closeMenu = () => setMenu(false);
+  const toggleCart = () => setCartOpen(!isCartOpen); // Toggle cart on click
+
     return <>
         <div className=" flex flex-col justify-center lg:flex-row sm:justify-between item-center p-4 m-4 ">
              {/* logo */}
@@ -55,14 +54,15 @@ function Navbar(){
                     <Link href={'/login'}> <CgProfile /></Link>   
                     <FaRegHeart/>
                     <div className="bg-green rounded-full w-[16px] h-[16px]   absolute top-9 right-14 text-[10px] text-white flex justify-center items-center font-bold">0</div>
-                    <BsCart3  onClick={Cart}/>
+                    <BsCart3  onClick={toggleCart}/>
                     {/* onClick={openCart} */}
+                    
                     <div className="bg-green rounded-full w-[16px] h-[16px]   absolute top-9 right-6 text-[10px] text-white flex justify-center items-center font-bold">0</div>
 
             </div>
             {/* Mobile Menu */}
 
-            <ul className={`lg:hidden flex flex-col gap-5 bg-slate-50 fixed top-0 left-0  py-20 px-10 font-bold w-64 z-50 rounded-lg transition-transform duration-500 ${isMenuOpen? 'translate-x-0': '-translate-x-full'}`}>
+            <ul className={`lg:hidden flex flex-col gap-5 bg-slate-50 h-screen fixed top-0 left-0  py-20 px-10 font-bold w-64 z-50 rounded-lg transition-transform duration-500 ${isMenuOpen? 'translate-x-0': '-translate-x-full'}`}>
 
                 <div className="absolute top-6 left-6" onClick={closeMenu}>
                 <RxCross2 size={24}/>
@@ -94,6 +94,8 @@ function Navbar(){
         </div>
 
             </ul>
+            {/* Cart component with props */}
+            <Cart isOpen={isCartOpen} onClose={() => setCartOpen(false)} />
           
         </div>
 
